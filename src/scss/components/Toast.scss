@@ -1,0 +1,137 @@
+@import "../colors";
+@import "../mixins";
+
+@mixin show-toast($dir) {
+    margin-#{$dir}: 0px;
+}
+
+@mixin hide-toast($dir) {
+    margin-#{$dir}: -1000px;
+}
+
+@mixin toast-position($x-dir, $y-dir, $x-val, $y-val) {
+    #{$x-dir}: $x-val;
+    #{$y-dir}: $y-val;
+}
+
+@mixin toast-position-centered($dir) {
+    left: 50%;
+    @include toast-position(transform, $dir, translate(-50%, 0), 10px);
+}
+
+@mixin toast-type($bg-color, $text-color) {
+    background: {
+        color: $bg-color;
+    }
+    color: $text-color;
+    border: {
+        color: $text-color;
+    }
+}
+
+.toast {
+    position: fixed;
+    z: {
+        index: 1000;
+    }
+    @include d-flex-center;
+    min-width: 240px;
+    max-width: 480px;
+    padding: 10px;
+    transition: {
+        property: all;
+        duration: 0.5s;
+    }
+    font: {
+        weight: 800;
+        size: 18px;
+    }
+    word-break: break-all;
+    cursor: pointer;
+    border: {
+        radius: 5px;
+        width: 0.2px;
+        style: dashed;
+    }
+    box-shadow: 0 4px 8px 0 $GREYT;
+
+    &:hover {
+        box-shadow: 0 8px 16px 0 $GREYT;
+    }
+
+    &.top-right {
+        @include toast-position(right, top, 10px, 10px);
+    }
+
+    &.bottom-right {
+        @include toast-position(right, bottom, 10px, 10px);
+    }
+
+    &.top-left {
+        @include toast-position(left, top, 10px, 10px);
+    }
+
+    &.bottom-left {
+        @include toast-position(left, bottom, 10px, 10px);
+    }
+
+    &.top-center {
+        @include toast-position-centered(top);
+    }
+
+    &.bottom-center {
+        @include toast-position-centered(bottom);
+    }
+
+    &.show-left {
+        @include show-toast(left);
+    }
+
+    &.show-right {
+        @include show-toast(right);
+    }
+
+    &.show-top {
+        @include show-toast(top);
+    }
+
+    &.show-bottom {
+        @include show-toast(bottom);
+    }
+
+    &.hide-left {
+        @include hide-toast(left);
+    }
+
+    &.hide-right {
+        @include hide-toast(right);
+    }
+
+    &.hide-top {
+        @include hide-toast(top);
+    }
+
+    &.hide-bottom {
+        @include hide-toast(bottom);
+    }
+
+    &.error {
+        @include toast-type($RED, $BLACK);
+    }
+
+    &.warn {
+        @include toast-type($YELLOW, $GREY);
+    }
+
+    &.success {
+        @include toast-type($GREEN, $BLACK);
+    }
+
+    &.info {
+        @include toast-type($WHITE, $GREY);
+    }
+
+    &.primary {
+        @include toast-type($BLUE, $BLACK);
+    }
+}
