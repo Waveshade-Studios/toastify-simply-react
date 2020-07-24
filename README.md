@@ -73,7 +73,7 @@ class MyComponent extends Component{
 
 ##### Contributor
 
-<a href="https://github.com/rohit231095"><div style="width:15px; height:15px; border-radius:50%;"><img src="http://i.imgur.com/XHjuWgo.png" /></div></a>
+<a href="https://github.com/rohit231095"><img src="http://i.imgur.com/XHjuWgo.png" width="40" height="50" /></a>
 
 [Waveshade-Studios](https://github.com/Waveshade-Studios)
 
