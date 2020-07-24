@@ -5,12 +5,25 @@ Just toasts got better and simpler
 ### Installation
 
 ```markdown
-yarn add toastify-simply-react
+# yarn add toastify-simply-react
 
 **or**
 
-npm install --save toastify-simply-react
+# npm install --save toastify-simply-react
 ```
+
+### Available props list
+
+Prop | Type | Description
+---- | ---- | -----------
+Toast | component | main component to show or render toast in your react component
+useToast | hook | can be used in functional component, to call `toast` function and `toastRef` to get `Toast` component reference
+toastClass | function | used in class components to get the `toastRef` for `Toast` component reference
+toastFunction | function | used in class components with `toastClass` to call the `toast` method
+toast | function | used to throw toast received from `toastRef` using `useToast` or `toastFunction`
+transitionDirection | string | toast slide in direction option, depends on `position`, default value `right`
+position | string | toast position option, depends on `transitionDirection`, default value `top-right`
+timeout | number | toast show timeout, default value `5000`
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
