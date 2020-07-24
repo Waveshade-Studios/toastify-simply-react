@@ -170,4 +170,5 @@ Any special requirement or feature will be handled at priority, with minimal fin
 # Release Notes
 
 Latest release [here](https://github.com/Waveshade-Studios/toastify-simply-react/releases/tag/v1.0.3)
+
 All releases [here](https://github.com/Waveshade-Studios/toastify-simply-react/releases)
