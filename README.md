@@ -73,7 +73,7 @@ class MyComponent extends Component{
 
 ##### Contributor
 
-<link href="https://github.com/Waveshade-Studios" />
+<img src="https://github.com/Waveshade-Studios" />
 
 [Waveshade-Studios](https://github.com/Waveshade-Studios)
 
