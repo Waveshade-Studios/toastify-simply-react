@@ -1,6 +1,6 @@
 {
   "name": "toastify-simply-react",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Just toastify in any react component",
   "main": "dist/toastify-simply-react.js",
   "main_min": "dist/toastify-simply-react.min.js",
@@ -15,13 +15,14 @@
   },
   "keywords": [
     "react",
+    "component",
     "notification",
     "toast",
     "react-component",
+    "toastify-simply-react",
     "react-toastify",
     "push",
-    "alert",
-    "toastify-simply-react"
+    "alert"
   ],
   "files": [
     "dist"
