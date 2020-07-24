@@ -4,10 +4,10 @@ Just toasts got better and simpler
 
 ### Installation
 
-```installation
+```markdown
 yarn add toastify-simply-react
 
-Bold or
+**or**
 
 npm install --save toastify-simply-react
 ```
