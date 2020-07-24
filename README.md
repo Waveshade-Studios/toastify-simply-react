@@ -69,6 +69,78 @@ class MyComponent extends Component{
 }
 ```
 
+### Types of toast
+
+Type | Method | Colors
+---- | ------ | ------
+primary | toast.primary(message, options) | {background-color: #03a9f4, text-color: #000000, border-color: #000000}
+success | toast.success(message, options) | {background-color: #8bc34a, text-color: #000000, border-color: #000000}
+warn | toast.warn(message, options) | {background-color: #ffeb3b, text-color: #455a64, border-color: #455a64}
+error | toast.error(message, options) | {background-color: #f44336, text-color: #000000, border-color: #000000}
+info | toast.info(message, options) | {background-color: #ffffff, text-color: #455a64, border-color: #455a64}
+
+##### Args
+
+Args | Type | Description
+---- | ---- | -----------
+message | string | message to be displayed inside toast
+options | object | available properties to change default toast props
+
+##### Options
+
+Option | Type | Description
+------ | ---- | -----------
+transitionDirection | string | toast slide in direction option, depends on `position`, default value `right`
+position | string | toast position option, depends on `transitionDirection`, default value `top-right`
+timeout | number | toast show timeout, default value `5000`
+
+### Modifying default toast props
+
+```jsx
+// inside hook default to all toasts
+useToast({
+    transitionDirection: "left"
+    position: "bottom-left"
+    timeout: 15000
+})
+
+//inside toastFunction default to all toasts
+toastFunction(this.toastRef, {
+    transitionDirection: "left"
+    position: "bottom-left"
+    timeout: 15000
+})
+
+// for individual toast
+toast.success("Hello", {
+    transitionDirection: "left"
+    position: "bottom-left"
+    timeout: 15000
+})
+
+**or**
+
+this.toast.success("Hello", {
+    transitionDirection: "left"
+    position: "bottom-left"
+    timeout: 15000
+})
+```
+
+### transitionDirection and position valid combinations
+
+transitionDirection | position
+------------------- | --------
+right | top-right
+left | top-left
+top | top-center
+right | bottom-right
+left | bottom-left
+bottom | bottom-center
+
+### Documentation
+[Docs](https://waveshade-studios.github.io/toastify-simply-react)
+
 ### Contribution
 
 ##### Contributors
@@ -86,7 +158,7 @@ class MyComponent extends Component{
 - Generated the pull request back to `master` branch to this library
 
 ## raise an issue
-- Create an issue [here](http://github.com/Waveshade-Studios/toastify-simply-react/issues)
+- Create an issue [here](https://github.com/Waveshade-Studios/toastify-simply-react/issues)
 - Add required labels to it
 - Issue will be reviewed, fixed and released as per the priority
 ```
