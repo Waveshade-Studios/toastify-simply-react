@@ -73,7 +73,7 @@ class MyComponent extends Component{
 
 ##### Contributor
 
-<a href="https://github.com/Waveshade-Studios/toastify-simply-react/graphs/contributors"><img src="https://github.com/Waveshade-Studios/toastify-simply-react/graphs/contributors" /></a>
+<a href="https://github.com/rohit231095"><img src="http://i.imgur.com/XHjuWgo.png" /></a>
 
 [Waveshade-Studios](https://github.com/Waveshade-Studios)
 
