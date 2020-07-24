@@ -72,7 +72,9 @@ class MyComponent extends Component{
 ### Contribution
 
 ##### Contributor
+
 <link href="https://github.com/Waveshade-Studios" />
+
 [Waveshade-Studios](https://github.com/Waveshade-Studios)
 
 [rohit231095](https://github.com/rohit231095)
