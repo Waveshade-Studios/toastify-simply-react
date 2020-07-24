@@ -29,7 +29,7 @@ timeout | number | toast show timeout, default value `5000`
 
 It's quiet simple
 
-```javascript
+```markdown
 ## With hooks
 
 import {useToast, Toast} from "toastify-simply-react";
@@ -71,8 +71,9 @@ class MyComponent extends Component{
 
 ### Contribution
 
-##### Individual Contributor
-http://github.com/rohit231095
+##### Contributor
+[Waveshade-Studios](https://github.com/Waveshade-Studios)
+[rohit231095](https://github.com/rohit231095)
 
 ##### Anbody can contribute
 
