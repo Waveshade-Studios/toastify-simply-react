@@ -150,7 +150,7 @@ bottom | bottom-center
 ##### Anbody can contribute
 
 ```markdown
-# Steps to contribute
+# Ways to contribute
 
 ## by coding some stuff together
 - Fork the repository from `master` branch
