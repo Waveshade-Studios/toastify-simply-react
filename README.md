@@ -166,3 +166,8 @@ bottom | bottom-center
 ### Financing
 
 Any special requirement or feature will be handled at priority, with minimal financial assistance, you can [email us](mailto:waveshade.studios@gmail.com?subject=Proposal-Toastify-Simply-React) directly.
+
+# Release Notes
+
+Latest release [here](https://github.com/Waveshade-Studios/toastify-simply-react/releases/tag/v1.0.3)
+All releases [here](https://github.com/Waveshade-Studios/toastify-simply-react/releases)
