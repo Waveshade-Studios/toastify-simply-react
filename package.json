@@ -1,20 +1,38 @@
 {
   "name": "toastify-simply-react",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Just toastify in any react component",
   "main": "dist/toastify-simply-react.js",
   "main_min": "dist/toastify-simply-react.min.js",
   "main_es": "dist/toastify-simply-react.es.min.js",
-  "author": "Waveshade Studios <waveshade.studios@gmail.com>",
+  "module": "dist/toastify-simply-react.es.min.js",
+  "author": "Waveshade Studios <waveshade.studios@gmail.com> (https://github.com/Waveshade-Studios)",
   "license": "MIT",
   "private": false,
   "scripts": {
     "build": "rollup -c",
     "start": "rollup -c -w"
   },
+  "keywords": [
+    "react",
+    "notification",
+    "toast",
+    "react-component",
+    "react-toastify",
+    "push",
+    "alert",
+    "toastify-simply-react"
+  ],
   "files": [
     "dist"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/Waveshade-Studios/toastify-simply-react"
+  },
+  "bugs": {
+    "url": "https://github.com/Waveshade-Studios/toastify-simply-react/issues"
+  },
   "devDependencies": {
     "@babel/cli": "^7.10.5",
     "@babel/core": "^7.10.5",
