@@ -29,13 +29,13 @@ timeout | number | toast show timeout, default value `5000`
 
 It's quiet simple
 
-```markdown
+```javascript
 ## With hooks
 
 import {useToast, Toast} from "toastify-simply-react";
 
 function MyComponent() {
-    const [toast, toastRef] = useToast();
+    const [toast, toastRef] = useToast(); // generate toast and toastRef
 
     return (
         <div>
@@ -47,13 +47,14 @@ function MyComponent() {
 }
 
 ## With functions
+
 import {toastClass, toastFunction, Toast} from "toastify-simply-react";
 
 class MyComponent extends Component{
-    toastRef = toastClass();
+    toastRef = toastClass(); // generate toastRef
 
     componentDidMount() {
-        this.toast = toastFunction(toastRef);
+        this.toast = toastFunction(toastRef); // generate toast
     }
 
     render() {
@@ -75,7 +76,7 @@ https://github.com/rohit231095
 
 ##### Anbody can contribute
 
-```markdown
+```sh
 # Steps to contribute
 
 ## by coding some stuff together
