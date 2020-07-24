@@ -1,10 +1,16 @@
-## Welcome to GitHub Pages
+## Toastify-Simply-React
 
-You can use the [editor on GitHub](https://github.com/Waveshade-Studios/toastify-simply-react/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Just toasts got better and simpler
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Installation
 
-### Markdown
+```installation
+yarn add toastify-simply-react
+
+**or**
+
+npm install --save toastify-simply-react
+```
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
 
