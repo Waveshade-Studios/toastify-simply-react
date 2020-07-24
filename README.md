@@ -41,7 +41,7 @@ function MyComponent() {
         <div>
             <button onClick={() => toast.primary("Hello!")}>show toast</button>
 
-            <Toast ref={toastRef} />
+            <Toast ref={toastRef} /> // Toast component
         </div>
     );
 }
@@ -72,11 +72,11 @@ class MyComponent extends Component{
 ### Contribution
 
 ##### Individual Contributor
-https://github.com/rohit231095
+@rohit231095
 
 ##### Anbody can contribute
 
-```sh
+```m
 # Steps to contribute
 
 ## by coding some stuff together
