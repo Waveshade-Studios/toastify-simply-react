@@ -17,40 +17,78 @@ Just toasts got better and simpler
 Prop | Type | Description
 ---- | ---- | -----------
 Toast | component | main component to show or render toast in your react component
-useToast | hook | can be used in functional component, to call `toast` function and `toastRef` to get `Toast` component reference
+useToast | hook | can be used in functional component, to call `toast` object and `toastRef` to get `Toast` component reference
 toastClass | function | used in class components to get the `toastRef` for `Toast` component reference
-toastFunction | function | used in class components with `toastClass` to call the `toast` method
-toast | function | used to throw toast received from `toastRef` using `useToast` or `toastFunction`
+toastFunction | function | used in class components with `toastClass` to call the `toast` object
+toast | object | used to throw toast, received from `toastRef` using `useToast` or `toastFunction`
 transitionDirection | string | toast slide in direction option, depends on `position`, default value `right`
 position | string | toast position option, depends on `transitionDirection`, default value `top-right`
 timeout | number | toast show timeout, default value `5000`
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### How to use
+
+It's quiet simple
 
 ```markdown
-Syntax highlighted code block
+## With hooks
 
-# Header 1
-## Header 2
-### Header 3
+import {useToast, Toast} from "toastify-simply-react";
 
-- Bulleted
-- List
+function MyComponent() {
+    const [toast, toastRef] = useToast();
 
-1. Numbered
-2. List
+    return (
+        <div>
+            <button onClick={() => toast.primary("Hello!")}>show toast</button>
 
-**Bold** and _Italic_ and `Code` text
+            <Toast ref={toastRef} />
+        </div>
+    );
+}
 
-[Link](url) and ![Image](src)
+## With functions
+import {toastClass, toastFunction, Toast} from "toastify-simply-react";
+
+class MyComponent extends Component{
+    toastRef = toastClass();
+
+    componentDidMount() {
+        this.toast = toastFunction(toastRef);
+    }
+
+    render() {
+        return (
+            <div>
+                <button onClick={() => this.toast.primary("Hello!")}>show toast</button>
+
+                <Toast ref={this.toastRef} /> // Toast component
+            </div>
+        );
+    }
+}
 ```
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+### Contribution
 
-### Jekyll Themes
+##### Individual Contributor
+https://github.com/rohit231095
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/Waveshade-Studios/toastify-simply-react/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+##### Anbody can contribute
 
-### Support or Contact
+```markdown
+# Steps to contribute
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## by coding some stuff together
+- Fork the repository from `master` branch
+- Fixed the things in your branch or forked repo
+- Generated the pull request back to `master` branch to this library
+
+## raise an issue
+- Create an issue [here](https://github.com/Waveshade-Studios/toastify-simply-react/issues)
+- Add required labels to it
+- Issue will be reviewed, fixed and released as per the priority
+```
+
+### Financing
+
+Any special requirement or feature will be handled at priority, with minimal financial assistance, you can [email us](mailto:waveshade.studios@gmail.com?subject=Proposal-Toastify-Simply-React) directly.
