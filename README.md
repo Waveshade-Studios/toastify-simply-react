@@ -1,8 +1,8 @@
-## Toastify-Simply-React
+# Toastify-Simply-React
 
 Just toasts got better and simpler
 
-### Installation
+## Installation
 
 ```markdown
 # yarn add toastify-simply-react
@@ -12,7 +12,8 @@ Just toasts got better and simpler
 # npm install --save toastify-simply-react
 ```
 
-### Available props list
+## Available props list
+
 
 Prop | Type | Description
 ---- | ---- | -----------
@@ -25,9 +26,11 @@ transitionDirection | string | toast slide in direction option, depends on `posi
 position | string | toast position option, depends on `transitionDirection`, default value `top-right`
 timeout | number | toast show timeout, default value `5000`
 
-### How to use
+
+## How to use
 
 It's quiet simple
+
 
 ```jsx
 ## With hooks
@@ -69,7 +72,9 @@ class MyComponent extends Component{
 }
 ```
 
+
 ### Types of toast
+
 
 Type | Method | Colors
 ---- | ------ | ------
@@ -81,12 +86,15 @@ info | toast.info(message, options) | {background-color: #ffffff, text-color: #4
 
 ##### Args
 
+
 Args | Type | Description
 ---- | ---- | -----------
 message | string | message to be displayed inside toast
 options | object | available properties to change default toast props
 
+
 ##### Options
+
 
 Option | Type | Description
 ------ | ---- | -----------
@@ -94,7 +102,9 @@ transitionDirection | string | toast slide in direction option, depends on `posi
 position | string | toast position option, depends on `transitionDirection`, default value `top-right`
 timeout | number | toast show timeout, default value `5000`
 
+
 ### Modifying default toast props
+
 
 ```jsx
 // inside hook default to all toasts
@@ -129,6 +139,7 @@ this.toast.success("Hello", {
 
 ### transitionDirection and position valid combinations
 
+
 transitionDirection | position
 ------------------- | --------
 right | top-right
@@ -138,16 +149,20 @@ right | bottom-right
 left | bottom-left
 bottom | bottom-center
 
-### Documentation
+## Documentation
 [Docs](https://waveshade-studios.github.io/toastify-simply-react)
 
-### Contribution
+## Contribution
 
-##### Contributors
+
+### Contributors
+
 
 <a href="https://github.com/rohit231095"><img src="http://i.imgur.com/XHjuWgo.png" width="40" height="40" style="border-radius:50%;" /></a> <a href="https://github.com/Waveshade-Studios"><img src="https://avatars1.githubusercontent.com/u/68241259?s=60&v=4" width="40" height="40" style="border-radius:50%;" /></a>
 
+
 ##### Anbody can contribute
+
 
 ```markdown
 # Ways to contribute
@@ -163,7 +178,8 @@ bottom | bottom-center
 - Issue will be reviewed, fixed and released as per the priority
 ```
 
-### Financing
+
+## Financing
 
 Any special requirement or feature will be handled at priority, with minimal financial assistance, you can [email us](mailto:waveshade.studios@gmail.com?subject=Proposal-Toastify-Simply-React) directly.
 
