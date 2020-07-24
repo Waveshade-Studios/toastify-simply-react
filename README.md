@@ -7,7 +7,7 @@ Just toasts got better and simpler
 ```installation
 yarn add toastify-simply-react
 
-**or**
+Bold or
 
 npm install --save toastify-simply-react
 ```
