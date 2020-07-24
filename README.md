@@ -75,10 +75,6 @@ class MyComponent extends Component{
 
 <a href="https://github.com/rohit231095"><img src="http://i.imgur.com/XHjuWgo.png" width="40" height="40" style="border-radius:50%;" /></a>
 
-[Waveshade-Studios](https://github.com/Waveshade-Studios)
-
-[rohit231095](https://github.com/rohit231095)
-
 ##### Anbody can contribute
 
 ```markdown
