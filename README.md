@@ -72,11 +72,11 @@ class MyComponent extends Component{
 ### Contribution
 
 ##### Individual Contributor
-@rohit231095
+http://github.com/rohit231095
 
 ##### Anbody can contribute
 
-```m
+```markdown
 # Steps to contribute
 
 ## by coding some stuff together
@@ -85,7 +85,7 @@ class MyComponent extends Component{
 - Generated the pull request back to `master` branch to this library
 
 ## raise an issue
-- Create an issue [here](https://github.com/Waveshade-Studios/toastify-simply-react/issues)
+- Create an issue [here](http://github.com/Waveshade-Studios/toastify-simply-react/issues)
 - Add required labels to it
 - Issue will be reviewed, fixed and released as per the priority
 ```
