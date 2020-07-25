@@ -173,7 +173,7 @@ bottom | bottom-center
 ## by coding some stuff together
 - Fork the repository from `master` branch
 - Fixed the things in your branch or forked repo
-- Generated the pull request back to `master` branch to this library
+- Generate the pull request back to `master` branch to this library
 
 ## raise an issue
 - Create an issue [here](https://github.com/Waveshade-Studios/toastify-simply-react/issues)
