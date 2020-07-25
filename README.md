@@ -27,7 +27,7 @@ toastFunction | function | used in class components with `toastClass` to call th
 toast | object | used to throw toast, received from `toastRef` using `useToast` or `toastFunction`
 transitionDirection | string | toast slide in direction option, depends on `position`, default value `right`
 position | string | toast position option, depends on `transitionDirection`, default value `top-right`
-timeout | number | toast show timeout, default value `5000`
+timeout | number | toast show timeout, default value `5000`, in ms
 
 
 ## How to use
@@ -76,7 +76,7 @@ class MyComponent extends Component{
 ```
 
 
-### Types of toast
+## Types of toast
 
 
 Type | Method | Colors
@@ -87,7 +87,7 @@ warn | toast.warn(message, options) | {background-color: #ffeb3b, text-color: #4
 error | toast.error(message, options) | {background-color: #f44336, text-color: #000000, border-color: #000000}
 info | toast.info(message, options) | {background-color: #ffffff, text-color: #455a64, border-color: #455a64}
 
-##### Args
+### Args
 
 
 Args | Type | Description
@@ -96,7 +96,7 @@ message | string | message to be displayed inside toast
 options | object | available properties to change default toast props
 
 
-##### Options
+### Options
 
 
 Option | Type | Description
@@ -106,7 +106,7 @@ position | string | toast position option, depends on `transitionDirection`, def
 timeout | number | toast show timeout, default value `5000`
 
 
-### Modifying default toast props
+## Modifying default toast props
 
 
 ```jsx
@@ -140,7 +140,7 @@ this.toast.success("Hello", {
 })
 ```
 
-### transitionDirection and position valid combinations
+## transitionDirection and position valid combinations
 
 
 transitionDirection | position
@@ -151,6 +151,14 @@ top | top-center
 right | bottom-right
 left | bottom-left
 bottom | bottom-center
+
+## Toast dismissal, explained
+
+Way | Occur | Description
+--- | ----- | -----------
+timeout | automatic | timeout happens automatic, just set the value in ms, default value `5000`
+action | manual | click on toast, it will disappear
+arrival | automatic | on arrival of next toast
 
 ## Documentation
 [Docs](https://waveshade-studios.github.io/toastify-simply-react)
