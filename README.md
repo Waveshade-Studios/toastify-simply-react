@@ -1,4 +1,4 @@
-[![npm](https://img.shields.io/npm/v/toastify-simply-react?style=flat-square)](https://www.npmjs.com/package/toastify-simply-react)
+[![npm](https://img.shields.io/npm/v/toastify-simply-react?color=%2300D9FF&logo=react&style=flat-square)](https://www.npmjs.com/package/toastify-simply-react)
 
 # Toastify-Simply-React
 
