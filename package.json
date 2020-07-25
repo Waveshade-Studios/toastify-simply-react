@@ -18,6 +18,7 @@
     "component",
     "notification",
     "toast",
+    "toastify",
     "react-component",
     "toastify-simply-react",
     "react-toastify",
