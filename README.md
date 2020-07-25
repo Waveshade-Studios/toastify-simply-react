@@ -1,3 +1,5 @@
+[![npm](https://img.shields.io/npm/v/toastify-simply-react?style=flat-square)](https://www.npmjs.com/package/toastify-simply-react)
+
 # Toastify-Simply-React
 
 Just toasts got better and simpler
