@@ -73,23 +73,23 @@ class MyComponent extends Component{
 
 ## Documentation
 [Github Pages](https://waveshade-studios.github.io/toastify-simply-react)
+
 [Official Site](https://toastify-simply-react.herokuapp.com/)
+
 [Documentation](https://toastify-simply-react.herokuapp.com/read-docs)
 
 ## Contribution
-
-
-### Contributors
 
 ## Financial Contribution
 
 [Contribute](https://opencollective.com/toastify-simply-react), if you like the work, you can [support us](https://opencollective.com/toastify-simply-react/contribute/reliever-19802/checkout)
 
+### Contributors
+
 <a href="https://github.com/rohit231095"><img src="http://i.imgur.com/XHjuWgo.png" width="40" height="40" style="border-radius:50%;" /></a> <a href="https://github.com/Waveshade-Studios"><img src="https://avatars1.githubusercontent.com/u/68241259?s=60&v=4" width="40" height="40" style="border-radius:50%;" /></a>
 
 
-##### Anbody can contribute
-
+## Code Contribution
 
 ```markdown
 # Ways to contribute
@@ -108,7 +108,7 @@ class MyComponent extends Component{
 
 ## Financing
 
-Any special requirement or feature will be handled at priority, with minimal financial assistance, you can [email us](mailto:waveshade.studios@gmail.com?subject=Proposal-Toastify-Simply-React) directly and contribute [here](https://opencollective.com/toastify-simply-react).
+Any special requirement or feature will be handled at priority, with minimal financial assistance, you can [email us](mailto:waveshade.studios@gmail.com?subject=Proposal-Toastify-Simply-React) directly and [contribute here](https://opencollective.com/toastify-simply-react).
 
 # Release Notes
 
