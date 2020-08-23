@@ -1,6 +1,6 @@
 {
   "name": "toastify-simply-react",
-  "version": "1.0.6",
+  "version": "1.1.0",
   "description": "Just toastify in any react component",
   "main": "dist/toastify-simply-react.js",
   "main_min": "dist/toastify-simply-react.min.js",

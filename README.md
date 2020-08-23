@@ -18,6 +18,7 @@ Visit official [site](https://toastify-simply-react.herokuapp.com/) for better o
 ```
 
 ## Demo
+
 A demo in live action is worth than million words.
 [See Live Action](https://toastify-simply-react.herokuapp.com/demo-playground)
 
