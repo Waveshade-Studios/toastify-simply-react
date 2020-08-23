@@ -1,9 +1,11 @@
-[![npm](https://img.shields.io/npm/v/toastify-simply-react?color=%2300D9FF&logo=react&style=flat-square)](https://www.npmjs.com/package/toastify-simply-react)
-[![npm](https://img.shields.io/npm/dw/toastify-simply-react?color=crimson&logo=npm&logoColor=crimson&style=flat-square)](https://www.npmjs.com/package/toastify-simply-react)
-
 # Toastify-Simply-React
 
 Just toasts got better and simpler
+
+[![npm](https://img.shields.io/npm/v/toastify-simply-react?color=%2300D9FF&logo=react&style=flat-square)](https://www.npmjs.com/package/toastify-simply-react)
+[![npm](https://img.shields.io/npm/dw/toastify-simply-react?color=crimson&logo=npm&logoColor=crimson&style=flat-square)](https://www.npmjs.com/package/toastify-simply-react)
+
+Visit official [site](https://toastify-simply-react.herokuapp.com/) for better overview and [documentation](https://toastify-simply-react.herokuapp.com/read-docs).
 
 ## Installation
 
@@ -15,19 +17,13 @@ Just toasts got better and simpler
 # npm install --save toastify-simply-react
 ```
 
+## Demo
+A demo in live action is worth than million words.
+[See Live Action](https://toastify-simply-react.herokuapp.com/demo-playground)
+
 ## Available props list
 
-
-Prop | Type | Description
----- | ---- | -----------
-Toast | component | main component to show or render toast in your react component
-useToast | hook | can be used in functional component, to call `toast` object and `toastRef` to get `Toast` component reference
-toastClass | function | used in class components to get the `toastRef` for `Toast` component reference
-toastFunction | function | used in class components with `toastClass` to call the `toast` object
-toast | object | used to throw toast, received from `toastRef` using `useToast` or `toastFunction`
-transitionDirection | string | toast slide in direction option, depends on `position`, default value `right`
-position | string | toast position option, depends on `transitionDirection`, default value `top-right`
-timeout | number | toast show timeout, default value `5000`, in ms
+[See props list](https://toastify-simply-react.herokuapp.com/read-docs/props)
 
 
 ## How to use
@@ -75,99 +71,19 @@ class MyComponent extends Component{
 }
 ```
 
-
-## Types of toast
-
-
-Type | Method | Colors
----- | ------ | ------
-primary | toast.primary(message, options) | {background-color: #03a9f4, text-color: #000000, border-color: #000000}
-success | toast.success(message, options) | {background-color: #8bc34a, text-color: #000000, border-color: #000000}
-warn | toast.warn(message, options) | {background-color: #ffeb3b, text-color: #455a64, border-color: #455a64}
-error | toast.error(message, options) | {background-color: #f44336, text-color: #000000, border-color: #000000}
-info | toast.info(message, options) | {background-color: #ffffff, text-color: #455a64, border-color: #455a64}
-
-### Args
-
-
-Args | Type | Description
----- | ---- | -----------
-message | string | message to be displayed inside toast
-options | object | available properties to change default toast props
-
-
-### Options
-
-
-Option | Type | Description
------- | ---- | -----------
-transitionDirection | string | toast slide in direction option, depends on `position`, default value `right`
-position | string | toast position option, depends on `transitionDirection`, default value `top-right`
-timeout | number | toast show timeout, default value `5000`
-
-
-## Modifying default toast props
-
-
-```jsx
-// inside hook default to all toasts
-useToast({
-    transitionDirection: "left"
-    position: "bottom-left"
-    timeout: 15000
-})
-
-//inside toastFunction default to all toasts
-toastFunction(this.toastRef, {
-    transitionDirection: "left"
-    position: "bottom-left"
-    timeout: 15000
-})
-
-// for individual toast
-toast.success("Hello", {
-    transitionDirection: "left"
-    position: "bottom-left"
-    timeout: 15000
-})
-
-**or**
-
-this.toast.success("Hello", {
-    transitionDirection: "left"
-    position: "bottom-left"
-    timeout: 15000
-})
-```
-
-## transitionDirection and position valid combinations
-
-
-transitionDirection | position
-------------------- | --------
-right | top-right
-left | top-left
-top | top-center
-right | bottom-right
-left | bottom-left
-bottom | bottom-center
-
-## Toast dismissal, explained
-
-Way | Occur | Description
---- | ----- | -----------
-timeout | automatic | timeout happens automatic, just set the value in ms, default value `5000`
-action | manual | click on toast, it will disappear
-arrival | automatic | on arrival of next toast
-
 ## Documentation
-[Docs](https://waveshade-studios.github.io/toastify-simply-react)
+[Github Pages](https://waveshade-studios.github.io/toastify-simply-react)
+[Official Site](https://toastify-simply-react.herokuapp.com/)
+[Documentation](https://toastify-simply-react.herokuapp.com/read-docs)
 
 ## Contribution
 
 
 ### Contributors
 
+## Financial Contribution
+
+[Contribute](https://opencollective.com/toastify-simply-react), if you like the work, you can [support us](https://opencollective.com/toastify-simply-react/contribute/reliever-19802/checkout)
 
 <a href="https://github.com/rohit231095"><img src="http://i.imgur.com/XHjuWgo.png" width="40" height="40" style="border-radius:50%;" /></a> <a href="https://github.com/Waveshade-Studios"><img src="https://avatars1.githubusercontent.com/u/68241259?s=60&v=4" width="40" height="40" style="border-radius:50%;" /></a>
 
@@ -192,10 +108,10 @@ arrival | automatic | on arrival of next toast
 
 ## Financing
 
-Any special requirement or feature will be handled at priority, with minimal financial assistance, you can [email us](mailto:waveshade.studios@gmail.com?subject=Proposal-Toastify-Simply-React) directly.
+Any special requirement or feature will be handled at priority, with minimal financial assistance, you can [email us](mailto:waveshade.studios@gmail.com?subject=Proposal-Toastify-Simply-React) directly and contribute [here](https://opencollective.com/toastify-simply-react).
 
 # Release Notes
 
-Latest release [here](https://github.com/Waveshade-Studios/toastify-simply-react/releases/tag/v1.0.6)
+Latest release [here](https://toastify-simply-react.herokuapp.com/releases)
 
-All releases [here](https://github.com/Waveshade-Studios/toastify-simply-react/releases)
+All releases [here](https://toastify-simply-react.herokuapp.com/releases)
