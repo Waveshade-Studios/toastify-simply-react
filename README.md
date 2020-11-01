@@ -2,10 +2,10 @@
 
 Just toasts got better and simpler
 
-[![npm](https://img.shields.io/npm/v/toastify-simply-react?color=%2300D9FF&logo=react&style=flat-square)](https://www.npmjs.com/package/toastify-simply-react)
-[![npm](https://img.shields.io/npm/dw/toastify-simply-react?color=crimson&logo=npm&logoColor=crimson&style=flat-square)](https://www.npmjs.com/package/toastify-simply-react)
+[![npm](https://img.shields.io/npm/v/toastify-simply-react)](https://www.npmjs.com/package/toastify-simply-react)
+![npm](https://img.shields.io/npm/dt/toastify-simply-react?color=yellow)
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/Waveshade-Studios/toastify-simply-react/badges/quality-score.png?b=v1.2)](https://scrutinizer-ci.com/g/Waveshade-Studios/toastify-simply-react/?branch=v1.2)
-[![Build Status](https://scrutinizer-ci.com/g/Waveshade-Studios/toastify-simply-react/badges/build.png?b=v1.2)](https://scrutinizer-ci.com/g/Waveshade-Studios/toastify-simply-react/build-status/v1.2)
+[![Scrutinizer build (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/build/g/Waveshade-Studios/toastify-simply-react)](https://scrutinizer-ci.com/g/Waveshade-Studios/toastify-simply-react/build-status/v1.2)
 
 Visit official [site](https://toastify-simply-react.herokuapp.com/) for better overview and [documentation](https://toastify-simply-react.herokuapp.com/read-docs).
 
