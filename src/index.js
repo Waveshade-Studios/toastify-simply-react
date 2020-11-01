@@ -1,6 +1,8 @@
-/** global: useToast */
+/**
+ * global: useToast
+ * global: Toast
+ * global: toastClass, toastFunction
+ */
 export { useToast } from "hooks";
-/** global: Toast */
 export { Toast } from "components";
-/** global: toastClass, toastFunction */
 export { toastClass, toastFunction } from "renderProps";
