@@ -32,7 +32,6 @@ export default [{
                 { find: "hooks", replacement: "./hooks" },
                 { find: "components", replacement: "./components" },
                 { find: "renderProps", replacement: "./renderProps" },
-                // { find: "react", replacement: __dirname + "/node_modules/react" }
             ]
         }),
         resolve(),
@@ -59,7 +58,6 @@ export default [{
                 { find: "hooks", replacement: "./hooks" },
                 { find: "components", replacement: "./components" },
                 { find: "renderProps", replacement: "./renderProps" },
-                // { find: "react", replacement: __dirname + "/node_modules/react" }
             ]
         }),
         resolve(),
