@@ -43,29 +43,21 @@ class Toast extends Component {
         clearTimeout(this.toastTimeout);
         this.setState({ visible: false });
     }
+    determineShiftDirection = (position, transitionDirection) => {
+        const directions = position.split("-");
+        if (directions.includes("center")) {
+            return directions[0];
+        } else {
+            if (directions.includes(transitionDirection)) {
+                return transitionDirection;
+            } else {
+                return directions[1];
+            }
+        }
+    }
     renderToast = (message, visible, type) => {
         const { transitionDirection, position } = this.state;
-        const determineShiftDirection = position => {
-            if (position === "top-right") {
-                return (transitionDirection === "top" || transitionDirection === "right") ? transitionDirection || "right" : "right";
-            }
-            if (position === "top-left") {
-                return (transitionDirection === "top" || transitionDirection === "left") ? transitionDirection || "left" : "left";
-            }
-            if (position === "top-center") {
-                return "top";
-            }
-            if (position === "bottom-right") {
-                return (transitionDirection === "bottom" || transitionDirection === "right") ? transitionDirection || "right" : "right";;
-            }
-            if (position === "bottom-left") {
-                return (transitionDirection === "bottom" || transitionDirection === "left") ? transitionDirection || "left" : "left";;
-            }
-            if (position === "bottom-center") {
-                return "bottom";
-            }
-        };
-        const shiftDirection = determineShiftDirection(position);
+        const shiftDirection = this.determineShiftDirection(position, transitionDirection);
         return <div onClick={this.closeToast} className={`${"toast"} ${visible ? "show" : "hide"}-${shiftDirection} ${type} ${position}`}>{message}</div>
     }
     render() {
