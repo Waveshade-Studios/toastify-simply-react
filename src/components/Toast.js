@@ -45,26 +45,27 @@ class Toast extends Component {
     }
     renderToast = (message, visible, type) => {
         const { transitionDirection, position } = this.state;
-        let shiftDirection = "";
-        if (position === "top-right") {
-            shiftDirection = (transitionDirection === "top" || transitionDirection === "right") ? transitionDirection || "right" : "right";
-        }
-        if (position === "top-left") {
-            shiftDirection = (transitionDirection === "top" || transitionDirection === "left") ? transitionDirection || "left" : "left";
-        }
-        if (position === "top-center") {
-            shiftDirection = "top";
-        }
-        if (position === "bottom-right") {
-            shiftDirection = (transitionDirection === "bottom" || transitionDirection === "right") ? transitionDirection || "right" : "right";;
-        }
-        if (position === "bottom-left") {
-            shiftDirection = (transitionDirection === "bottom" || transitionDirection === "left") ? transitionDirection || "left" : "left";;
-        }
-        if (position === "bottom-center") {
-            shiftDirection = "bottom";
-        }
-
+        const determineShiftDirection = position => {
+            if (position === "top-right") {
+                return (transitionDirection === "top" || transitionDirection === "right") ? transitionDirection || "right" : "right";
+            }
+            if (position === "top-left") {
+                return (transitionDirection === "top" || transitionDirection === "left") ? transitionDirection || "left" : "left";
+            }
+            if (position === "top-center") {
+                return "top";
+            }
+            if (position === "bottom-right") {
+                return (transitionDirection === "bottom" || transitionDirection === "right") ? transitionDirection || "right" : "right";;
+            }
+            if (position === "bottom-left") {
+                return (transitionDirection === "bottom" || transitionDirection === "left") ? transitionDirection || "left" : "left";;
+            }
+            if (position === "bottom-center") {
+                return "bottom";
+            }
+        };
+        const shiftDirection = determineShiftDirection(position);
         return <div onClick={this.closeToast} className={`${"toast"} ${visible ? "show" : "hide"}-${shiftDirection} ${type} ${position}`}>{message}</div>
     }
     render() {
