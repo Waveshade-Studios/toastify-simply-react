@@ -1,22 +1,6 @@
-// const { default: Toast } = require("./Toast");
-// const { default: ToastTopLeft } = require("./ToastTopLeft");
-// const { default: ToastTopRight } = require("./ToastTopRight");
-// const { default: ToastTopCenter } = require("./ToastTopCenter");
-// const { default: ToastBottomLeft } = require("./ToastBottomLeft");
-// const { default: ToastBottomRight } = require("./ToastBottomRight");
-// const { default: ToastBottomCenter } = require("./ToastBottomCenter");
+import ToastComponent from "./Toast";
 
-// exports.Toast = Toast;
-// exports.ToastTopLeft = ToastTopLeft;
-// exports.ToastTopRight = ToastTopRight;
-// exports.ToastTopCenter = ToastTopCenter;
-// exports.ToastBottomLeft = ToastBottomLeft;
-// exports.ToastBottomRight = ToastBottomRight;
-// exports.ToastBottomCenter = ToastBottomCenter;
+const components = { Toast: ToastComponent };
 
-import ToastCom from "./Toast";
-
-const components = { Toast: ToastCom };
-
-export const Toast = ToastCom;
+export const Toast = ToastComponent;
 export default components;

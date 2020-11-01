@@ -1,46 +1,42 @@
 import React, { Component } from "react";
 import "../scss/components/Toast.scss";
-import ToastTopRight from "./ToastTopRight";
-import ToastTopLeft from "./ToastTopLeft";
-import ToastTopCenter from "./ToastTopCenter";
-import ToastBottomRight from "./ToastBottomRight";
-import ToastBottomLeft from "./ToastBottomLeft";
-import ToastBottomCenter from "./ToastBottomCenter";
 
 class Toast extends Component {
     state = {
         visible: false,
-        type: "",
+        type: "primary",
         message: "",
         transitionDirection: "right",
         position: "top-right",
         timeout: 5000
     }
     toastTimeout = null;
-    throwToast = async (message, type, visible, options) => {
+    throwToast = (message, type, options) => {
         const { transitionDirection, position, timeout } = options;
-        this.setState({ transitionDirection: transitionDirection || "right", position: position || "top-right", timeout: timeout || 5000 }, () => {
+        const validPositions = ["top-right", "top-left", "top-center", "bottom-right", "bottom-left", "bottom-center"];
+        const validTypes = ["warn", "success", "error", "info", "primary"];
+        this.setState({ message, type: [...validTypes].includes(type) ? type : "primary", transitionDirection, position: [...validPositions].includes(position) ? position || "top-right" : "top-right", timeout: timeout || 5000 }, () => {
             setTimeout(() => {
-                this.setState({ message, type, visible }, () => {
+                this.setState({ visible: true }, () => {
                     this.toastTimeout = setTimeout(() => {
                         if (this.state.visible) {
                             this.setState({ visible: false });
                         }
                     }, this.state.timeout);
                 });
-            }, 10);
+            }, 250);
         });
     }
-    toast = (message, type, visible = true, options = {}) => {
+    toast = (message, type, options = {}) => {
         if (this.state.visible) {
             clearTimeout(this.toastTimeout);
             this.setState({ visible: false }, () => {
                 setTimeout(() => {
-                    this.throwToast(message, type, visible, options);
-                }, 500);
-            })
+                    this.throwToast(message, type, options);
+                }, 250);
+            });
         } else {
-            this.throwToast(message, type, visible, options);
+            this.throwToast(message, type, options);
         }
     }
     closeToast = () => {
@@ -49,24 +45,27 @@ class Toast extends Component {
     }
     renderToast = (message, visible, type) => {
         const { transitionDirection, position } = this.state;
-        if (transitionDirection === "right" && position === "top-right") {
-            return <ToastTopRight message={message} visible={visible} type={type} hideOnTap={this.closeToast} />;
+        let shiftDirection = "";
+        if (position === "top-right") {
+            shiftDirection = (transitionDirection === "top" || transitionDirection === "right") ? transitionDirection || "right" : "right";
         }
-        if (transitionDirection === "left" && position === "top-left") {
-            return <ToastTopLeft message={message} visible={visible} type={type} hideOnTap={this.closeToast} />;
+        if (position === "top-left") {
+            shiftDirection = (transitionDirection === "top" || transitionDirection === "left") ? transitionDirection || "left" : "left";
         }
-        if (transitionDirection === "top" && position === "top-center") {
-            return <ToastTopCenter message={message} visible={visible} type={type} hideOnTap={this.closeToast} />;
+        if (position === "top-center") {
+            shiftDirection = "top";
         }
-        if (transitionDirection === "right" && position === "bottom-right") {
-            return <ToastBottomRight message={message} visible={visible} type={type} hideOnTap={this.closeToast} />;
+        if (position === "bottom-right") {
+            shiftDirection = (transitionDirection === "bottom" || transitionDirection === "right") ? transitionDirection || "right" : "right";;
         }
-        if (transitionDirection === "left" && position === "bottom-left") {
-            return <ToastBottomLeft message={message} visible={visible} type={type} hideOnTap={this.closeToast} />;
+        if (position === "bottom-left") {
+            shiftDirection = (transitionDirection === "bottom" || transitionDirection === "left") ? transitionDirection || "left" : "left";;
         }
-        if (transitionDirection === "bottom" && position === "bottom-center") {
-            return <ToastBottomCenter message={message} visible={visible} type={type} hideOnTap={this.closeToast} />;
+        if (position === "bottom-center") {
+            shiftDirection = "bottom";
         }
+
+        return <div onClick={this.closeToast} className={`${"toast"} ${visible ? "show" : "hide"}-${shiftDirection} ${type} ${position}`}>{message}</div>
     }
     render() {
         const { message, visible, type } = this.state;
