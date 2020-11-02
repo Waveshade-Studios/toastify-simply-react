@@ -11,7 +11,8 @@
   "private": false,
   "scripts": {
     "build": "rollup -c",
-    "start": "rollup -c -w"
+    "start": "rollup -c -w",
+    "publish": "npm publish"
   },
   "keywords": [
     "react",
