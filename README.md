@@ -3,7 +3,7 @@
 Just toasts got better and simpler
 
 [![npm](https://img.shields.io/npm/v/toastify-simply-react)](https://www.npmjs.com/package/toastify-simply-react)
-![npm](https://img.shields.io/npm/dw/toastify-simply-react?color=yellow)
+![npm](https://img.shields.io/npm/dt/toastify-simply-react?color=yellow)
 [![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/Waveshade-Studios/toastify-simply-react?color=%23CA63DD)](https://scrutinizer-ci.com/g/Waveshade-Studios/toastify-simply-react)
 [![Scrutinizer build (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/build/g/Waveshade-Studios/toastify-simply-react)](https://scrutinizer-ci.com/g/Waveshade-Studios/toastify-simply-react/build-status)
 
