@@ -1,0 +1,8 @@
+{
+    "moduleNameMapper": {
+        "^.+\\.(css|less|scss)$": "babel-jest"
+    },
+    "setupFilesAfterEnv": [
+        "<rootDir>/jest.setup.js"
+    ]
+}
