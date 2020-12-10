@@ -4,8 +4,10 @@ Just toasts got better and simpler
 
 [![npm](https://img.shields.io/npm/v/toastify-simply-react)](https://www.npmjs.com/package/toastify-simply-react)
 ![npm](https://img.shields.io/npm/dt/toastify-simply-react?color=yellow)
-[![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/Waveshade-Studios/toastify-simply-react?color=%23CA63DD)](https://scrutinizer-ci.com/g/Waveshade-Studios/toastify-simply-react)
-[![Scrutinizer build (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/build/g/Waveshade-Studios/toastify-simply-react)](https://scrutinizer-ci.com/g/Waveshade-Studios/toastify-simply-react/build-status)
+[![Scrutinizer code quality (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/quality/g/Waveshade-Studios/toastify-simply-react?color=CA63DD&logo=scrutinizer)](https://scrutinizer-ci.com/g/Waveshade-Studios/toastify-simply-react)
+[![Scrutinizer build (GitHub/Bitbucket)](https://img.shields.io/scrutinizer/build/g/Waveshade-Studios/toastify-simply-react?logo=scrutinizer)](https://scrutinizer-ci.com/g/Waveshade-Studios/toastify-simply-react/build-status)
+![Codecov](https://img.shields.io/codecov/c/gh/Waveshade-Studios/toastify-simply-react?color=orange&logo=codecov)
+![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Waveshade-Studios/toastify-simply-react/CI%20&%20Coverage?logo=github)
 
 Visit official [site](https://toastify-simply-react.herokuapp.com/) for better overview and [documentation](https://toastify-simply-react.herokuapp.com/read-docs).
 
