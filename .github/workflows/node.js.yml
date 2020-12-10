@@ -5,7 +5,7 @@ name: toastify-simply-react CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, test-coverage ]
   pull_request:
     branches: [ master ]
 
