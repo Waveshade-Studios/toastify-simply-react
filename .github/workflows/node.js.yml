@@ -43,4 +43,4 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: rm -rf node_modules && yarn install --frozen-lockfile
-    - run: yarn test --coverage && coveralls < coverage/lcov.info && rm -rf ./coverage
+    - run: yarn test --coverage && ./node_modules/coveralls < coverage/lcov.info && rm -rf ./coverage
