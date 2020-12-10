@@ -5,9 +5,9 @@ name: toastify-simply-react CI
 
 on:
   push:
-    branches: [ master, test-coverage ]
+    branches: [ master ]
   pull_request:
-    branches: [ master, test-coverage ]
+    branches: [ master ]
 
 jobs:
   build:
@@ -42,7 +42,5 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-        repo_token: ${{ secrets.COVERALLS_TOKEN }}
-        github-token: ${{ secrets.GITHUB_TOKEN }}
     - run: rm -rf node_modules && yarn install --frozen-lockfile
     - run: yarn test --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
