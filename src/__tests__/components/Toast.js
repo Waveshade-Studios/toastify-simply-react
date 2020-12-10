@@ -46,3 +46,13 @@ describe("Test Component", () => {
         expect(wrapper.mount.text()).toContain(msg);
     });
 });
+
+describe("Test functionalities", () => {
+    it("close the toast by clicking", () => {
+        const msg = "test message";
+        toast.info(msg);
+        expect(wrapper.mount.find(".toast").length).toEqual(1);
+        wrapper.mount.find(".toast").simulate("click");
+        expect(wrapper.mount.contains(msg)).toEqual(true);
+    });
+});
