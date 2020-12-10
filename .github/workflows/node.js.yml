@@ -5,7 +5,7 @@ name: toastify-simply-react CI
 
 on:
   push:
-    branches: [ master ]
+    branches: [ master, test-coverage ]
   pull_request:
     branches: [ master ]
 
@@ -43,4 +43,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
     - run: rm -rf node_modules && yarn install --frozen-lockfile
-    - run: yarn test --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage
+    - run: yarn test --coverage
+    - run: bash <(curl -s https://codecov.io/bash)
+    - run: rm -rf coverage
