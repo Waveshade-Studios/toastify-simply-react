@@ -8,7 +8,7 @@ let wrapper = {};
 
 const testShallow = () => {
     const MyTestComponent = () => {
-        const [toast, toastRef] = useToast();
+        const [toast, toastRef] = useToast({ timeout: 5000, transitionDirection: "top", position: "top-left" });
         return (
             <div>
                 <Toast ref={toastRef} />
@@ -21,7 +21,7 @@ const testShallow = () => {
 const testMount = () => {
     let toastF;
     const MyTestComponent = () => {
-        const [toast, toastRef] = useToast();
+        const [toast, toastRef] = useToast({ timeout: 5000, transitionDirection: "top", position: "top-left" });
         toastF = toast;
         return (
             <div>
@@ -54,5 +54,24 @@ describe("Test functionalities", () => {
         expect(wrapper.mount.find(".toast").length).toEqual(1);
         wrapper.mount.find(".toast").simulate("click");
         expect(wrapper.mount.contains(msg)).toEqual(true);
+    });
+    it("toast object should have all props", () => {
+        expect(toast).toHaveProperty("info");
+        expect(toast).toHaveProperty("primary");
+        expect(toast).toHaveProperty("warn");
+        expect(toast).toHaveProperty("success");
+        expect(toast).toHaveProperty("error");
+    });
+    it("change optional params", () => {
+        toast.info("test info type", { timeout: 15000, transitionDirection: "left", position: "top-left" });
+        expect(wrapper.mount.text()).toContain("test info type");
+        toast.warn("test warn type", { timeout: 15000, transitionDirection: "left", position: "top-left" });
+        expect(wrapper.mount.text()).toContain("test warn type");
+        toast.primary("test primary type", { timeout: 15000, transitionDirection: "left", position: "top-left" });
+        expect(wrapper.mount.text()).toContain("test primary type");
+        toast.success("test success type", { timeout: 15000, transitionDirection: "left", position: "top-left" });
+        expect(wrapper.mount.text()).toContain("test success type");
+        toast.error("test error type", { timeout: 15000, transitionDirection: "left", position: "top-left" });
+        expect(wrapper.mount.text()).toContain("test error type");
     });
 });
