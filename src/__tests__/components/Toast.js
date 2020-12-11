@@ -74,4 +74,26 @@ describe("Test functionalities", () => {
         toast.error("test error type", { timeout: 15000, transitionDirection: "left", position: "top-left" });
         expect(wrapper.mount.text()).toContain("test error type");
     });
+    it("try different postion and transitionDirection combinations", () => {
+        toast.info("test postion: top-left, transitionDirection: top", { timeout: 15000, transitionDirection: "top", position: "top-left" });
+        expect(wrapper.mount.text()).toContain("test postion: top-left, transitionDirection: top");
+        toast.info("test postion: top-left, transitionDirection: left", { timeout: 15000, transitionDirection: "left", position: "top-left" });
+        expect(wrapper.mount.text()).toContain("test postion: top-left, transitionDirection: left");
+        toast.info("test postion: top-right, transitionDirection: top", { timeout: 15000, transitionDirection: "top", position: "top-right" });
+        expect(wrapper.mount.text()).toContain("test postion: top-right, transitionDirection: top");
+        toast.info("test postion: top-right, transitionDirection: right", { timeout: 15000, transitionDirection: "right", position: "top-right" });
+        expect(wrapper.mount.text()).toContain("test postion: top-right, transitionDirection: right");
+        toast.info("test postion: top-center, transitionDirection: top", { timeout: 15000, transitionDirection: "top", position: "top-center" });
+        expect(wrapper.mount.text()).toContain("test postion: top-center, transitionDirection: top");
+        toast.info("test postion: bottom-left, transitionDirection: bottom", { timeout: 15000, transitionDirection: "bottom", position: "bottom-left" });
+        expect(wrapper.mount.text()).toContain("test postion: bottom-left, transitionDirection: bottom");
+        toast.info("test postion: bottom-left, transitionDirection: left", { timeout: 15000, transitionDirection: "left", position: "bottom-left" });
+        expect(wrapper.mount.text()).toContain("test postion: bottom-left, transitionDirection: left");
+        toast.info("test postion: bottom-right, transitionDirection: bottom", { timeout: 15000, transitionDirection: "bottom", position: "bottom-right" });
+        expect(wrapper.mount.text()).toContain("test postion: bottom-right, transitionDirection: bottom");
+        toast.info("test postion: bottom-right, transitionDirection: right", { timeout: 15000, transitionDirection: "right", position: "bottom-right" });
+        expect(wrapper.mount.text()).toContain("test postion: bottom-right, transitionDirection: right");
+        toast.info("test postion: bottom-center, transitionDirection: bottom", { timeout: 15000, transitionDirection: "bottom", position: "bottom-center" });
+        expect(wrapper.mount.text()).toContain("test postion: bottom-center, transitionDirection: bottom");
+    });
 });
