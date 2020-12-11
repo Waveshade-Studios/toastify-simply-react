@@ -48,9 +48,12 @@ describe("Test Component", () => {
 });
 
 describe("Test functionalities", () => {
+    beforeEach(() => {
+        jest.useFakeTimers();
+    });
     it("close the toast by clicking", () => {
         const msg = "test message";
-        toast.info(msg);
+        toast.info(msg, { timeout: 1000 });
         expect(wrapper.mount.find(".toast").length).toEqual(1);
         wrapper.mount.find(".toast").simulate("click");
         expect(wrapper.mount.contains(msg)).toEqual(true);
@@ -95,5 +98,29 @@ describe("Test functionalities", () => {
         expect(wrapper.mount.text()).toContain("test postion: bottom-right, transitionDirection: right");
         toast.info("test postion: bottom-center, transitionDirection: bottom", { timeout: 15000, transitionDirection: "bottom", position: "bottom-center" });
         expect(wrapper.mount.text()).toContain("test postion: bottom-center, transitionDirection: bottom");
+    });
+    it("try wrong transitionDirection values", () => {
+        toast.info("test postion: top-left, transitionDirection: left", { timeout: 15000, transitionDirection: "right", position: "top-left" });
+        expect(wrapper.mount.text()).toContain("test postion: top-left, transitionDirection: left");
+        toast.info("test postion: top-right, transitionDirection: right", { timeout: 15000, transitionDirection: "left", position: "top-right" });
+        expect(wrapper.mount.text()).toContain("test postion: top-right, transitionDirection: right");
+        toast.info("test postion: top-center, transitionDirection: top", { timeout: 15000, transitionDirection: "center", position: "top-center" });
+        expect(wrapper.mount.text()).toContain("test postion: top-center, transitionDirection: top");
+        toast.info("test postion: bottom-left, transitionDirection: left", { timeout: 15000, transitionDirection: "right", position: "bottom-left" });
+        expect(wrapper.mount.text()).toContain("test postion: bottom-left, transitionDirection: left");
+        toast.info("test postion: bottom-right, transitionDirection: right", { timeout: 15000, transitionDirection: "left", position: "bottom-right" });
+        expect(wrapper.mount.text()).toContain("test postion: bottom-right, transitionDirection: right");
+        toast.info("test postion: bottom-center, transitionDirection: bottom", { timeout: 15000, transitionDirection: "center", position: "bottom-center" });
+        expect(wrapper.mount.text()).toContain("test postion: bottom-center, transitionDirection: bottom");
+    });
+    it("try multiple toasts of variable timeout", () => {
+        toast.info("timeout: 1000", { timeout: 1000 });
+        expect(wrapper.mount.text()).toContain("timeout: 1000");
+        toast.info("timeout: 25000", { timeout: 25000 });
+        expect(wrapper.mount.text()).toContain("timeout: 25000");
+        toast.info("timeout: 1000", { timeout: 1000 });
+        expect(wrapper.mount.text()).toContain("timeout: 1000");
+        toast.info("timeout: 3000", { timeout: 3000 });
+        expect(wrapper.mount.text()).toContain("timeout: 3000");
     });
 });
