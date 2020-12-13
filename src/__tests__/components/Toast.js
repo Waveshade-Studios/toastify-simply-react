@@ -56,6 +56,7 @@ describe("Test functionalities", () => {
         toast.info(msg, { timeout: 1000 });
         expect(wrapper.mount.find(".toast").length).toEqual(1);
         wrapper.mount.find(".toast").simulate("click");
+        jest.runAllTimers();
         expect(wrapper.mount.contains(msg)).toEqual(true);
     });
     it("toast object should have all props", () => {
