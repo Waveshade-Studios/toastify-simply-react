@@ -1,12 +1,12 @@
 {
   "name": "toastify-simply-react",
-  "version": "1.2.4",
+  "version": "2.0.0",
   "description": "Just toastify in any react component",
   "main": "dist/toastify-simply-react.js",
   "main_min": "dist/toastify-simply-react.min.js",
   "main_es": "dist/toastify-simply-react.es.min.js",
   "module": "dist/toastify-simply-react.es.min.js",
-  "author": "Waveshade Studios <waveshade.studios@gmail.com> (https://github.com/Waveshade-Studios)",
+  "author": "Rohit Khandelwal <rohit01795@gmail.com> (https://github.com/rohit231095)",
   "license": "MIT",
   "private": false,
   "scripts": {
@@ -43,31 +43,30 @@
     "url": "https://github.com/Waveshade-Studios/toastify-simply-react/issues"
   },
   "devDependencies": {
-    "@babel/cli": "^7.10.5",
-    "@babel/core": "^7.10.5",
-    "@babel/plugin-proposal-class-properties": "^7.10.4",
-    "@babel/plugin-syntax-class-properties": "^7.10.4",
-    "@babel/preset-env": "^7.10.4",
-    "@babel/preset-react": "^7.10.4",
-    "@babel/runtime": "^7.10.5",
-    "@rollup/plugin-alias": "^3.1.1",
-    "@rollup/plugin-babel": "^5.1.0",
-    "@rollup/plugin-commonjs": "^14.0.0",
-    "@rollup/plugin-node-resolve": "^8.4.0",
-    "babel-jest": "^26.6.3",
-    "enzyme": "^3.11.0",
-    "enzyme-adapter-react-16": "^1.15.5",
-    "jest": "^26.6.3",
-    "node-sass": "^4.14.1",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "rollup": "^2.22.1",
-    "rollup-plugin-sass": "^1.2.2",
-    "rollup-plugin-terser": "^6.1.0"
+    "@babel/core": "^7.23.9",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-syntax-class-properties": "^7.12.13",
+    "@babel/preset-env": "^7.23.9",
+    "@babel/preset-react": "^7.23.3",
+    "@babel/runtime": "^7.23.9",
+    "@rollup/plugin-alias": "^5.1.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^25.0.7",
+    "@rollup/plugin-node-resolve": "^15.2.3",
+    "@testing-library/dom": "^9.3.4",
+    "@testing-library/jest-dom": "^6.4.0",
+    "@testing-library/react": "^14.2.0",
+    "@testing-library/user-event": "^14.5.2",
+    "jest": "^29.7.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "rollup": "^2.79.1",
+    "rollup-plugin-sass": "^1.12.21",
+    "rollup-plugin-terser": "^7.0.2",
+    "sass": "^1.70.0"
   },
   "peerDependencies": {
-    "react": "^16.8.0",
-    "react-dom": "^16.8.0"
-  },
-  "dependencies": {}
+    "react": "^16.9.0 || ^17 || ^18",
+    "react-dom": "^16.9.0 || ^17 || ^18"
+  }
 }

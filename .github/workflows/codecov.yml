@@ -16,17 +16,17 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [14.x, 16.x, 18.x, 20.x]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run: rm -rf node_modules && yarn install --frozen-lockfile
-    - run: yarn run build --if-present
-    - run: yarn test
+    - run: rm -rf node_modules && npm ci
+    - run: npm run build --if-present
+    - run: npm run test --if-present
 
   coverage:
 
@@ -35,15 +35,15 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [10.x, 12.x, 14.x]
+        node-version: [14.x, 16.x, 18.x, 20.x]
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v4
     - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v1
+      uses: actions/setup-node@v4
       with:
         node-version: ${{ matrix.node-version }}
-    - run: rm -rf node_modules && yarn install --frozen-lockfile
-    - run: yarn test --coverage
+    - run: rm -rf node_modules && npm ci
+    - run: npm run test --coverage
     - run: bash <(curl -s https://codecov.io/bash)
     - run: rm -rf coverage
