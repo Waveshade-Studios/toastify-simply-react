@@ -1,5 +1,5 @@
-@import "../colors";
-@import "../mixins";
+@use "../colors";
+@use "../mixins";
 
 @mixin show-toast($dir) {
     margin-#{$dir}: 0px;
@@ -34,7 +34,7 @@
     z: {
         index: 1000;
     }
-    @include d-flex-center;
+    @include mixins.d-flex-center;
     min-width: 240px;
     max-width: 480px;
     padding: 10px;
@@ -53,10 +53,10 @@
         width: 0.2px;
         style: dashed;
     }
-    box-shadow: 0 4px 8px 0 $GREYT;
+    box-shadow: 0 4px 8px 0 colors.$GREYT;
 
     &:hover {
-        box-shadow: 0 8px 16px 0 $GREYT;
+        box-shadow: 0 8px 16px 0 colors.$GREYT;
     }
 
     &.top-right {
@@ -116,22 +116,22 @@
     }
 
     &.error {
-        @include toast-type($RED, $BLACK);
+        @include toast-type(colors.$RED, colors.$BLACK);
     }
 
     &.warn {
-        @include toast-type($YELLOW, $GREY);
+        @include toast-type(colors.$YELLOW, colors.$GREY);
     }
 
     &.success {
-        @include toast-type($GREEN, $BLACK);
+        @include toast-type(colors.$GREEN, colors.$BLACK);
     }
 
     &.info {
-        @include toast-type($WHITE, $GREY);
+        @include toast-type(colors.$WHITE, colors.$GREY);
     }
 
     &.primary {
-        @include toast-type($BLUE, $BLACK);
+        @include toast-type(colors.$BLUE, colors.$BLACK);
     }
 }
