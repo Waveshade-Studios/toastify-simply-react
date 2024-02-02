@@ -9,7 +9,7 @@ Just toasts got better and simpler
 ![Codecov](https://img.shields.io/codecov/c/gh/Waveshade-Studios/toastify-simply-react?color=orange&logo=codecov)
 ![GitHub Workflow Status](https://img.shields.io/github/workflow/status/Waveshade-Studios/toastify-simply-react/CI%20&%20Coverage?logo=github)
 
-Visit official [site](https://toastify-simply-react.herokuapp.com/) for better overview and [documentation](https://toastify-simply-react.herokuapp.com/read-docs).
+Visit official [site](https://toastify-simply-react.web.app) for better overview and [documentation](https://toastify-simply-react.web.app/read-docs).
 
 ## Installation
 
@@ -24,11 +24,11 @@ Visit official [site](https://toastify-simply-react.herokuapp.com/) for better o
 ## Demo
 
 A demo in live action is worth than million words.
-[See Live Action](https://toastify-simply-react.herokuapp.com/demo-playground)
+[See Live Action](https://toastify-simply-react.web.app/demo-playground)
 
 ## Available props list
 
-[See props list](https://toastify-simply-react.herokuapp.com/read-docs/props)
+[See props list](https://toastify-simply-react.web.app/read-docs/props)
 
 
 ## How to use
@@ -79,9 +79,9 @@ class MyComponent extends Component{
 ## Documentation
 [Github Pages](https://waveshade-studios.github.io/toastify-simply-react)
 
-[Official Site](https://toastify-simply-react.herokuapp.com/)
+[Official Site](https://toastify-simply-react.web.app/)
 
-[Documentation](https://toastify-simply-react.herokuapp.com/read-docs)
+[Documentation](https://toastify-simply-react.web.app/read-docs)
 
 ## Contribution
 
@@ -117,6 +117,6 @@ Any special requirement or feature will be handled at priority, with minimal fin
 
 # Release Notes
 
-Latest release [here](https://toastify-simply-react.herokuapp.com/releases)
+Latest release [here](https://toastify-simply-react.web.app/releases)
 
-All releases [here](https://toastify-simply-react.herokuapp.com/releases)
+All releases [here](https://toastify-simply-react.web.app/releases)
